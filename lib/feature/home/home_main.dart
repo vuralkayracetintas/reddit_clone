@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_color/flutter_color.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
+import 'package:reddit_clone/feature/home/card_details.dart';
 
 class HomeMain extends StatelessWidget {
   const HomeMain({
@@ -22,45 +23,56 @@ class HomeMain extends StatelessWidget {
       itemBuilder: (context, index) {
         return Column(
           children: [
-            Card(
-              elevation: 1,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.black,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
-                        child: Column(
-                          children: [
-                            Text(state
-                                .redditModel.data.children[index].data.author),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: HexColor(state
-                                    .redditModel
-                                    .data
-                                    .children[index]
-                                    .data
-                                    .linkFlairBackgroundColor),
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Text(state.redditModel.data.children[index]
-                                  .data.linkFlairText),
-                            ),
-                          ],
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CardDeteails(
+                              state: state,
+                              index: index,
+                            )));
+              },
+              child: Card(
+                elevation: 1,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.black,
                         ),
-                      ),
-                    ],
-                  ),
-                  Text(state.redditModel.data.children[index].data.title),
-                  Text(
-                    state.redditModel.data.children[index].data.selftext,
-                    maxLines: 5,
-                  ),
-                ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Column(
+                            children: [
+                              Text(state.redditModel.data.children[index].data
+                                  .author),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: HexColor(state
+                                      .redditModel
+                                      .data
+                                      .children[index]
+                                      .data
+                                      .linkFlairBackgroundColor),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: Text(state.redditModel.data
+                                    .children[index].data.linkFlairText),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(state.redditModel.data.children[index].data.title),
+                    Text(
+                      state.redditModel.data.children[index].data.selftext,
+                      maxLines: 5,
+                    ),
+                  ],
+                ),
               ),
             ),
             const Divider()
