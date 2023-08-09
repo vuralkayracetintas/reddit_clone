@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:reddit_clone/bloc/reddit_states.dart';
 
+@immutable
 class CardDeteails extends StatelessWidget {
   CardDeteails({
     Key? key,
