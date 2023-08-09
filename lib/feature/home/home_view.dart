@@ -6,7 +6,6 @@ import 'package:reddit_clone/bloc/reddit_events.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/bloc/spacex_bloc.dart';
 import 'package:reddit_clone/product/constans/string_constans.dart';
-import 'package:reddit_clone/product/model/reddit_model.dart';
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
 
 int counter = 0;
