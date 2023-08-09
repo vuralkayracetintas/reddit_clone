@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 RedditModel redditModelFromMap(String str) =>
@@ -95,6 +96,7 @@ class ChildData {
   LinkFlairTextColor linkFlairTextColor;
   double upvoteRatio;
   String authorFlairBackgroundColor;
+  String linkFlairBackgroundColor;
   int ups;
   int totalAwardsReceived;
   MediaEmbed mediaEmbed;
@@ -159,7 +161,7 @@ class ChildData {
   dynamic modReasonBy;
   dynamic numReports;
   dynamic removalReason;
-
+  String linkFlairText;
   String id;
   bool isRobotIndexable;
   dynamic reportReasons;
@@ -206,6 +208,7 @@ class ChildData {
     required this.linkFlairTextColor,
     required this.upvoteRatio,
     required this.authorFlairBackgroundColor,
+    required this.linkFlairBackgroundColor,
     required this.ups,
     required this.totalAwardsReceived,
     required this.mediaEmbed,
@@ -270,6 +273,7 @@ class ChildData {
     this.modReasonBy,
     this.numReports,
     this.removalReason,
+    required this.linkFlairText,
     required this.id,
     required this.isRobotIndexable,
     this.reportReasons,
@@ -303,6 +307,7 @@ class ChildData {
         gilded: json["gilded"],
         clicked: json["clicked"],
         title: json["title"],
+        linkFlairText: json["link_flair_text"],
         linkFlairRichtext:
             List<dynamic>.from(json["link_flair_richtext"].map((x) => x)),
         subredditNamePrefixed:
@@ -316,6 +321,7 @@ class ChildData {
         hideScore: json["hide_score"],
         name: json["name"],
         quarantine: json["quarantine"],
+        linkFlairBackgroundColor: json["link_flair_background_color"],
         linkFlairTextColor:
             linkFlairTextColorValues.map[json["link_flair_text_color"]]!,
         upvoteRatio: json["upvote_ratio"]?.toDouble(),
@@ -693,7 +699,7 @@ final whitelistStatusValues = EnumValues({"all_ads": WhitelistStatus.ALL_ADS});
 
 class Preview {
   List<Image> images;
-  bool enabled;
+  bool enabled = true;
 
   Preview({
     required this.images,

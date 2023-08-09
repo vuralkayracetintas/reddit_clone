@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reddit_clone/bloc/reddit_events.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/bloc/spacex_bloc.dart';
+import 'package:reddit_clone/feature/custom_circularProgress.dart';
+import 'package:reddit_clone/feature/home/home_main.dart';
 import 'package:reddit_clone/product/constans/string_constans.dart';
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
 
@@ -33,16 +35,13 @@ class _HomeViewState extends State<HomeView> {
             debugPrint('state: ${state.runtimeType}');
 
             if (state is RedditInitialState || state is RedditLoadingState) {
-              return const CircularProgressIndicator();
+              return const CustomCircleProgress();
             } else if (state is RedditErrorState) {
               debugPrint('error : ${state.message}');
               return Text('Getting Error: ${state.message}');
             } else if (state is RedditLoadedState) {
-              return Column(
-                children: [
-                  Text('text'),
-                  Text(state.redditModel.data.children.first.data.title),
-                ],
+              return HomeMain(
+                state: state,
               );
             }
             return const SizedBox.shrink();
