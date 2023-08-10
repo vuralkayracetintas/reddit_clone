@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:reddit_clone/bloc/reddit_states.dart';
 
-@immutable
+// ignore: must_be_immutable
 class CardDeteails extends StatelessWidget {
   CardDeteails({
     Key? key,
@@ -17,7 +17,7 @@ class CardDeteails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Card Details'),
+        title: const Text('Card Details'),
       ),
       body: Center(
         child: Text(state.redditModel.data.children[index].data.title),

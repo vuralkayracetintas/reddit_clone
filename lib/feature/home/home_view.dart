@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reddit_clone/bloc/reddit_events.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/bloc/spacex_bloc.dart';
-import 'package:reddit_clone/feature/custom_circularProgress.dart';
+import 'package:reddit_clone/feature/widget/custom_circularProgress.dart';
 import 'package:reddit_clone/feature/home/home_main.dart';
 import 'package:reddit_clone/product/constans/string_constans.dart';
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
