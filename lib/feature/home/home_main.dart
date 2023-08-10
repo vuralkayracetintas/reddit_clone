@@ -31,7 +31,7 @@ class _HomeMainState extends State<HomeMain> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => CardDeteails(
+                          builder: (context) => CardDetails(
                                 state: widget.state,
                                 index: index,
                               )));

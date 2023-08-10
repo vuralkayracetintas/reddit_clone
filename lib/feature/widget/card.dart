@@ -134,7 +134,7 @@ class _CustomCardState extends State<CustomCard> {
                           ? const FaIcon(FontAwesomeIcons.solidThumbsUp)
                           : const FaIcon(FontAwesomeIcons.thumbsUp),
                     ),
-                    Text('Like : $likes'),
+                    Text('$likes'),
                     IconButton(
                       onPressed: increaseDislike,
                       icon: isDisliked

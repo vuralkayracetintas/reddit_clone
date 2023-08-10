@@ -21,4 +21,6 @@ class StringConstants {
 
   static String createCommunity = 'Create a Community';
   static String settingsText = 'Settings';
+
+  static String cardDetails = 'Card Details';
 }
