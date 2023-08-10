@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:reddit_clone/bloc/reddit_events.dart';
-import 'package:reddit_clone/bloc/reddit_states.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_events.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
+
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
 
 class RedditBloc extends Bloc<RedditEvents, RedditStates> {

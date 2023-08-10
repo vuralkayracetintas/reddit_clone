@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
 
-import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/feature/widget/card.dart';
 import 'package:reddit_clone/feature/widget/card_details.dart';
 
@@ -44,18 +44,3 @@ class _HomeMainState extends State<HomeMain> {
     );
   }
 }
-
-
-
-
-
-    // print(widget.state.redditModel.data.children.first.data.preview!.images
-    //     .reversed.first.source.url);
-
-    // print(widget.state.redditModel.data.children.first.data.preview!.images
-    //     .reversed.first.source.url);
-    // print(widget.state.redditModel.data.children.first.data.preview!.images
-    //     .reversed.first.source.height);
-    // print(widget
-    //     .state.redditModel.data.children.first.data.linkFlairBackgroundColor);
-   

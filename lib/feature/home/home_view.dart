@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:reddit_clone/bloc/reddit_events.dart';
-import 'package:reddit_clone/bloc/reddit_states.dart';
-import 'package:reddit_clone/bloc/spacex_bloc.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_events.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_bloc.dart';
+
 import 'package:reddit_clone/feature/widget/custom_circular_progress.dart';
 import 'package:reddit_clone/feature/home/home_main.dart';
 import 'package:reddit_clone/feature/widget/custom_drawer.dart';
@@ -19,6 +20,14 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  bool isDarkMode = false; // Tema modu durumu
+
+  void _toggleDarkMode(bool value) {
+    setState(() {
+      isDarkMode = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -28,6 +37,14 @@ class _HomeViewState extends State<HomeView> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(StringConstants.appbarTitle),
+          actions: [
+            // Tema değiştirme anahtar düğmesi
+            Switch(
+                value: isDarkMode,
+                onChanged: (newValue) {
+                  isDarkMode = newValue;
+                }),
+          ],
         ),
         drawer: CustomDrawer(),
         body: BlocBuilder<RedditBloc, RedditStates>(

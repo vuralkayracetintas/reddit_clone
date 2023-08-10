@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_color/flutter_color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kartal/kartal.dart';
-import 'package:reddit_clone/bloc/reddit_states.dart';
+import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
+
 import 'package:reddit_clone/product/constans/color_constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
