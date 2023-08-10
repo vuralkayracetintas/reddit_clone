@@ -1,12 +1,11 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:reddit_clone/bloc/reddit_events.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/bloc/spacex_bloc.dart';
 import 'package:reddit_clone/feature/widget/custom_circular_progress.dart';
 import 'package:reddit_clone/feature/home/home_main.dart';
+import 'package:reddit_clone/feature/widget/custom_drawer.dart';
 import 'package:reddit_clone/product/constans/string_constans.dart';
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
 
@@ -28,8 +27,9 @@ class _HomeViewState extends State<HomeView> {
       )..add(RedditLoadData()),
       child: Scaffold(
         appBar: AppBar(
-          title: Text(StringConstans.appbarTitle),
+          title: Text(StringConstants.appbarTitle),
         ),
+        drawer: CustomDrawer(),
         body: BlocBuilder<RedditBloc, RedditStates>(
           builder: (BuildContext context, state) {
             debugPrint('state: ${state.runtimeType}');

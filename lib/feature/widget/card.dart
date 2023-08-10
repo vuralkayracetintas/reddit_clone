@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kartal/kartal.dart';
 import 'package:reddit_clone/bloc/reddit_states.dart';
 import 'package:reddit_clone/product/constans/color_constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomCard extends StatefulWidget {
   const CustomCard({super.key, required this.state, required this.index});
@@ -50,6 +51,15 @@ class _CustomCardState extends State<CustomCard> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget.state.redditModel.data.children[widget.index].data.permalink);
+    final Uri uri = Uri.parse(
+        'https://www.reddit.com${widget.state.redditModel.data.children[widget.index].data.permalink}');
+    Future<void> _launchUrl() async {
+      if (!await launchUrl(uri)) {
+        throw Exception('Could not launch $uri');
+      }
+    }
+
     return Card(
       elevation: 100,
       child: Padding(
@@ -65,8 +75,8 @@ class _CustomCardState extends State<CustomCard> {
                 Padding(
                   padding: context.padding.onlyLeftLow,
 
-                  child: Text(widget.state.redditModel.data
-                      .children[widget.index].data.author), //user name
+                  child: Text(
+                      'Posted by u/${widget.state.redditModel.data.children[widget.index].data.author}'), //user name
                 ),
               ],
             ),
@@ -113,20 +123,41 @@ class _CustomCardState extends State<CustomCard> {
               ),
 
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconButton(
-                  onPressed: increaseLike,
-                  icon: isLiked
-                      ? const FaIcon(FontAwesomeIcons.solidThumbsUp)
-                      : const FaIcon(FontAwesomeIcons.thumbsUp),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: increaseLike,
+                      icon: isLiked
+                          ? const FaIcon(FontAwesomeIcons.solidThumbsUp)
+                          : const FaIcon(FontAwesomeIcons.thumbsUp),
+                    ),
+                    Text('Like : $likes'),
+                    IconButton(
+                      onPressed: increaseDislike,
+                      icon: isDisliked
+                          ? const FaIcon(FontAwesomeIcons.solidThumbsDown)
+                          : const FaIcon(FontAwesomeIcons.thumbsDown),
+                    ),
+                  ],
                 ),
-                Text('Like : $likes'),
-                IconButton(
-                  onPressed: increaseDislike,
-                  icon: isDisliked
-                      ? const FaIcon(FontAwesomeIcons.solidThumbsDown)
-                      : const FaIcon(FontAwesomeIcons.thumbsDown),
+                Row(
+                  children: [
+                    IconButton(
+                      icon: FaIcon(FontAwesomeIcons.comment),
+                      onPressed: () {},
+                    ),
+                    Text(widget.state.redditModel.data.children[widget.index]
+                        .data.numComments
+                        .toString()),
+                  ],
                 ),
+                IconButton(
+                    onPressed: _launchUrl,
+                    icon: const FaIcon(
+                      FontAwesomeIcons.arrowUpFromBracket,
+                    )),
               ],
             ),
           ],
