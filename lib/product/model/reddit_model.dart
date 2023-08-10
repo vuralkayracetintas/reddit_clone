@@ -93,7 +93,7 @@ class ChildData {
   bool hideScore;
   String name;
   bool quarantine;
-  LinkFlairTextColor linkFlairTextColor;
+  // LinkFlairTextColor linkFlairTextColor;
   double upvoteRatio;
   String authorFlairBackgroundColor;
   String linkFlairBackgroundColor;
@@ -115,7 +115,7 @@ class ChildData {
   bool isCreatedFromAdsUi;
   bool authorPremium;
   String thumbnail;
-  bool edited;
+  // bool edited;
   AuthorFlairCssClass authorFlairCssClass;
   List<dynamic> authorFlairRichtext;
   Gildings gildings;
@@ -205,7 +205,7 @@ class ChildData {
     required this.hideScore,
     required this.name,
     required this.quarantine,
-    required this.linkFlairTextColor,
+    // required this.linkFlairTextColor,
     required this.upvoteRatio,
     required this.authorFlairBackgroundColor,
     required this.linkFlairBackgroundColor,
@@ -227,7 +227,7 @@ class ChildData {
     required this.isCreatedFromAdsUi,
     required this.authorPremium,
     required this.thumbnail,
-    required this.edited,
+    // required this.edited,
     required this.authorFlairCssClass,
     required this.authorFlairRichtext,
     required this.gildings,
@@ -322,8 +322,8 @@ class ChildData {
         name: json["name"],
         quarantine: json["quarantine"],
         linkFlairBackgroundColor: json["link_flair_background_color"],
-        linkFlairTextColor:
-            linkFlairTextColorValues.map[json["link_flair_text_color"]]!,
+        // linkFlairTextColor:
+        //     linkFlairTextColorValues.map[json["link_flair_text_color"]]!,
         upvoteRatio: json["upvote_ratio"]?.toDouble(),
         authorFlairBackgroundColor: json["author_flair_background_color"],
         ups: json["ups"],
@@ -346,7 +346,7 @@ class ChildData {
         isCreatedFromAdsUi: json["is_created_from_ads_ui"],
         authorPremium: json["author_premium"],
         thumbnail: json["thumbnail"],
-        edited: json["edited"],
+        // edited: json["edited"],
         authorFlairCssClass:
             authorFlairCssClassValues.map[json["author_flair_css_class"]]!,
         authorFlairRichtext:
@@ -443,8 +443,8 @@ class ChildData {
         "hide_score": hideScore,
         "name": name,
         "quarantine": quarantine,
-        "link_flair_text_color":
-            linkFlairTextColorValues.reverse[linkFlairTextColor],
+        // "link_flair_text_color":
+        //     linkFlairTextColorValues.reverse[linkFlairTextColor],
         "upvote_ratio": upvoteRatio,
         "author_flair_background_color": authorFlairBackgroundColor,
         "ups": ups,
@@ -465,7 +465,7 @@ class ChildData {
         "is_created_from_ads_ui": isCreatedFromAdsUi,
         "author_premium": authorPremium,
         "thumbnail": thumbnail,
-        "edited": edited,
+        // "edited": edited,
         "author_flair_css_class":
             authorFlairCssClassValues.reverse[authorFlairCssClass],
         "author_flair_richtext":

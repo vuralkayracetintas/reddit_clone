@@ -146,7 +146,7 @@ class _CustomCardState extends State<CustomCard> {
                 Row(
                   children: [
                     IconButton(
-                      icon: FaIcon(FontAwesomeIcons.comment),
+                      icon: const FaIcon(FontAwesomeIcons.comment),
                       onPressed: () {},
                     ),
                     Text(widget.state.redditModel.data.children[widget.index]
@@ -155,7 +155,8 @@ class _CustomCardState extends State<CustomCard> {
                   ],
                 ),
                 IconButton(
-                    onPressed: _launchUrl,
+                    onPressed: () {},
+                    //_launchUrl,
                     icon: const FaIcon(
                       FontAwesomeIcons.arrowUpFromBracket,
                     )),
