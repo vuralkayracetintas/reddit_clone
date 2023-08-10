@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reddit_clone/bloc/RedditBloc/reddit_events.dart';
 import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
 import 'package:reddit_clone/bloc/RedditBloc/reddit_bloc.dart';
-
 import 'package:reddit_clone/feature/widget/custom_circular_progress.dart';
 import 'package:reddit_clone/feature/home/home_main.dart';
 import 'package:reddit_clone/feature/widget/custom_drawer.dart';
@@ -36,15 +35,10 @@ class _HomeViewState extends State<HomeView> {
       )..add(RedditLoadData()),
       child: Scaffold(
         appBar: AppBar(
-          title: Text(StringConstants.appbarTitle),
-          actions: [
-            // Tema değiştirme anahtar düğmesi
-            Switch(
-                value: isDarkMode,
-                onChanged: (newValue) {
-                  isDarkMode = newValue;
-                }),
-          ],
+          title: Text(
+            StringConstants.appbarTitle,
+          ),
+          actions: [],
         ),
         drawer: CustomDrawer(),
         body: BlocBuilder<RedditBloc, RedditStates>(

@@ -14,11 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.light,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
+      themeMode: ThemeMode.system,
+      theme: ThemeData.dark(
+        useMaterial3: true,
       ),
       home: RepositoryProvider(
         create: (context) => RedditRepository(),
