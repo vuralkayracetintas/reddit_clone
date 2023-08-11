@@ -73,3 +73,19 @@ This project involves developing a Reddit-like application using Flutter. The ap
 
 </div>
 
+
+
+## Kullanılan Paketler
+
+- cupertino_icons: [![Pub Version](https://img.shields.io/pub/v/cupertino_icons.svg)](https://pub.dev/packages/cupertino_icons)
+- equatable: [![Pub Version](https://img.shields.io/pub/v/equatable.svg)](https://pub.dev/packages/equatable)
+- http: [![Pub Version](https://img.shields.io/pub/v/http.svg)](https://pub.dev/packages/http)
+- flutter_bloc: [![Pub Version](https://img.shields.io/pub/v/flutter_bloc.svg)](https://pub.dev/packages/flutter_bloc)
+- json_serializable: [![Pub Version](https://img.shields.io/pub/v/json_serializable.svg)](https://pub.dev/packages/json_serializable)
+- flutter_color: [![Pub Version](https://img.shields.io/pub/v/flutter_color.svg)](https://pub.dev/packages/flutter_color)
+- lottie: [![Pub Version](https://img.shields.io/pub/v/lottie.svg)](https://pub.dev/packages/lottie)
+- kartal: [![Pub Version](https://img.shields.io/pub/v/kartal.svg)](https://pub.dev/packages/kartal)
+- font_awesome_flutter: [![Pub Version](https://img.shields.io/pub/v/font_awesome_flutter.svg)](https://pub.dev/packages/font_awesome_flutter)
+- url_launcher: [![Pub Version](https://img.shields.io/pub/v/url_launcher.svg)](https://pub.dev/packages/url_launcher)
+- share_plus: [![Pub Version](https://img.shields.io/pub/v/share_plus.svg)](https://pub.dev/packages/share_plus)
+- flutter_launcher_icons: [![Pub Version](https://img.shields.io/pub/v/flutter_launcher_icons.svg)](https://pub.dev/packages/flutter_launcher_icons)
