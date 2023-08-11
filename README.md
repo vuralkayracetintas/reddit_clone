@@ -33,19 +33,22 @@ Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı
   <div style="flex: 1; margin-right: 10px;">
     <img src="assets/screenshots/1.png" alt="Ana Ekran" width="300" />
     <img src="assets/screenshots/2.png" alt="Ana Ekran" width="300" />
-    
+     <p style="text-align: center;">Ana ekran, Drawe</p>
   </div>
   <div style="flex: 1; margin-left: 10px;">
+  <div>
+  <img src="assets/screenshots/5.png" alt="Detay Sayfası" width="300"/>
+  <img src="assets/screenshots/6.png" alt="Detay Sayfası" width="300"/>
+  <p style="text-align: center;">Paylas, Detay</p>
+  
+</div>
 <div>
   <img src="assets/screenshots/3.png" alt="Detay Sayfası" width="300"/>
   <img src="assets/screenshots/4.png" alt="Detay Sayfası" width="300"/>
+   <p style="text-align: center;">Like, Dislike </p>
   
 </div>
-<div>
-  <img src="assets/screenshots/5.png" alt="Detay Sayfası" width="300"/>
-  <img src="assets/screenshots/6.png" alt="Detay Sayfası" width="300"/>
-  
-</div>
+
 
 </div>
 
