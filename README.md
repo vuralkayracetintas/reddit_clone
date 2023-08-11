@@ -75,7 +75,7 @@ This project involves developing a Reddit-like application using Flutter. The ap
 
 
 
-## Kullanılan Paketler
+##  Packages Used / Kullanılan Paketler
 
 - cupertino_icons: [![Pub Version](https://img.shields.io/pub/v/cupertino_icons.svg)](https://pub.dev/packages/cupertino_icons)
 - equatable: [![Pub Version](https://img.shields.io/pub/v/equatable.svg)](https://pub.dev/packages/equatable)
