@@ -30,5 +30,6 @@ class StringConstants {
 
   static String failedData = "Failed to load data";
 
-  static String loteiCircle = 'assets/animation/customCircle.json';
+  static String lottieCircle = 'assets/animation/customCircle.json';
+  static String lottieSplash = 'assets/animation/redditAnimation.json';
 }

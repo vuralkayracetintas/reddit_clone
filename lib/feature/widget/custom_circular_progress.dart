@@ -8,7 +8,7 @@ class CustomCircleProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Lottie.asset(StringConstants.loteiCircle),
+      child: Lottie.asset(StringConstants.lottieCircle),
     );
   }
 }
