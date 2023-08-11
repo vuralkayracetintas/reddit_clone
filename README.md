@@ -25,6 +25,27 @@ Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı
 
 
 
+
+
+This project involves developing a Reddit-like application using Flutter. The application fetches data from a specific API and displays this data in the form of Card widgets arranged in a list.
+
+## Features
+- Arranging data from the API in the form of a list using Card widgets.
+- Displaying username, title, description, and category tag on each card.
+- Displaying the number of likes and comments on the cards.
+- Ability for users to make new posts.
+- Functionality to like and comment on cards.
+
+
+## Usage
+1. When the application is launched, data from the API will be automatically loaded and displayed in a list using Card widgets.
+
+2. Each card will display the username, title, description, category tag, number of likes, and number of comments. Users can tap on cards to access more details.
+
+3. Beneath each card, there will be buttons for liking and commenting. When users like or comment, the data is updated using the pull-to-refresh feature.
+
+
+
 - [LinkedIn](https://www.linkedin.com/in/vural-kayra-cetintas/)
 - [Github](https://github.com/vuralkayracetintas)
 
@@ -33,7 +54,7 @@ Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı
   <div style="flex: 1; margin-right: 10px;">
     <img src="assets/screenshots/1.png" alt="Ana Ekran" width="300" />
     <img src="assets/screenshots/2.png" alt="Ana Ekran" width="300" />
-     <p style="text-align: center;">Ana ekran, Drawe</p>
+     <p style="text-align: center;">Ana ekran, Drawer</p>
   </div>
   <div style="flex: 1; margin-left: 10px;">
   <div>
