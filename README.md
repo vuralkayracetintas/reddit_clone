@@ -29,3 +29,32 @@ Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı
 - [Github](https://github.com/vuralkayracetintas)
 
 
+<div style="display: flex; justify-content: center;">
+  <div style="flex: 1; margin-right: 10px;">
+    <img src="assets/screenshots/1.png" alt="Ana Ekran" width="300" />
+    <img src="assets/screenshots/2.png" alt="Ana Ekran" width="300" />
+    
+  </div>
+  <div style="flex: 1; margin-left: 10px;">
+<div>
+  <img src="assets/screenshots/3.png" alt="Detay Sayfası" width="300"/>
+  <img src="assets/screenshots/4.png" alt="Detay Sayfası" width="300"/>
+  
+</div>
+<div>
+  <img src="assets/screenshots/3.png" alt="Detay Sayfası" width="300"/>
+  <img src="assets/screenshots/4.png" alt="Detay Sayfası" width="300"/>
+  
+</div>
+<div>
+  <img src="assets/screenshots/5.png" alt="Detay Sayfası" width="300"/>
+  <img src="assets/screenshots/6.png" alt="Detay Sayfası" width="300"/>
+  
+</div>
+
+    
+  </div>
+</div>
+
+
+

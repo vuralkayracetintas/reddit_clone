@@ -606,11 +606,11 @@ class Oembed {
   int height;
   int width;
   String html;
-  String authorName;
+
   String providerName;
   String thumbnailUrl;
   int thumbnailHeight;
-  String authorUrl;
+  // String authorUrl;
 
   Oembed({
     required this.providerUrl,
@@ -621,11 +621,10 @@ class Oembed {
     required this.height,
     required this.width,
     required this.html,
-    required this.authorName,
     required this.providerName,
     required this.thumbnailUrl,
     required this.thumbnailHeight,
-    required this.authorUrl,
+    // required this.authorUrl,
   });
 
   factory Oembed.fromMap(Map<String, dynamic> json) => Oembed(
@@ -637,11 +636,10 @@ class Oembed {
         height: json["height"],
         width: json["width"],
         html: json["html"],
-        authorName: json["author_name"],
         providerName: json["provider_name"],
         thumbnailUrl: json["thumbnail_url"],
         thumbnailHeight: json["thumbnail_height"],
-        authorUrl: json["author_url"],
+        // authorUrl: json["author_url"],
       );
 
   Map<String, dynamic> toMap() => {
@@ -653,11 +651,10 @@ class Oembed {
         "height": height,
         "width": width,
         "html": html,
-        "author_name": authorName,
         "provider_name": providerName,
         "thumbnail_url": thumbnailUrl,
         "thumbnail_height": thumbnailHeight,
-        "author_url": authorUrl,
+        // "author_url": authorUrl,
       };
 }
 
