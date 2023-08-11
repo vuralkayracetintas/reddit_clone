@@ -1,16 +1,31 @@
-# reddit_clone
+# Reddit Clone 
 
-A new Flutter project.
+[Reddit FlutterDev Top API](https://www.reddit.com/r/flutterdev/top.json?count=20)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı içermektedir. Uygulama, belirli bir API'den gelen verileri alır ve bu verileri Card widget'larıyla bir liste şeklinde görüntüler.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Özellikler
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- API'den gelen verileri Card widget'larıyla liste şeklinde düzenleme.
+- Her bir kartta kullanıcı adı, başlık, açıklama ve kategori etiketi gösterimi.
+- Kartlarda beğeni ve yorum sayısı görüntüleme.
+- Kullanıcıların yeni gönderi paylaşma yeteneği.
+- Kartlara beğenme ve yorum yapma işlevselliği.
+
+
+## Kullanım
+
+1. Uygulama başlatıldığında, API'den gelen veriler otomatik olarak yüklenecek ve Card widget'larıyla bir liste şeklinde görüntülenecektir.
+
+2. Her bir kartta, kullanıcı adı, başlık, açıklama, kategori etiketi, beğeni sayısı ve yorum sayısı görüntülenecektir. Kullanıcılar kartlara tıklayarak daha fazla ayrıntıya ulaşabilirler.
+
+3. Her bir kartın altında, beğenme ve yorum yapma düğmeleri bulunur. Kullanıcılar beğendiğinde veya yorum yaptığında, veriler pull to reflesh özelliği ile güncellenir.
+
+
+
+- [LinkedIn](https://www.linkedin.com/in/vural-kayra-cetintas/)
+- [Github](https://github.com/vuralkayracetintas)
+
+
