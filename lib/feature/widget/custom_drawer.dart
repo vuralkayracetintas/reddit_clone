@@ -14,9 +14,7 @@ class CustomDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-            ),
+            decoration: const BoxDecoration(),
             child: Column(
               children: [
                 Row(
@@ -33,6 +31,9 @@ class CustomDrawer extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 9,
                 ),
                 Row(
                   children: [

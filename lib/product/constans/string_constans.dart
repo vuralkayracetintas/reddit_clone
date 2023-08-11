@@ -23,4 +23,12 @@ class StringConstants {
   static String settingsText = 'Settings';
 
   static String cardDetails = 'Card Details';
+
+  static String appTitle = 'Reddit Clone';
+  static String repositoryUrl =
+      'https://www.reddit.com/r/flutterdev/top.json?count=20';
+
+  static String failedData = "Failed to load data";
+
+  static String loteiCircle = 'assets/animation/customCircle.json';
 }
