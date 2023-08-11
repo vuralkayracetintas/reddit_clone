@@ -66,7 +66,7 @@ class _CustomCardState extends State<CustomCard> {
 
   @override
   Widget build(BuildContext context) {
-    print(widget.state.redditModel.data.children[widget.index].data.permalink);
+    //print(widget.state.redditModel.data.children[widget.index].data.permalink);
     final Uri uri = Uri.parse(
         'https://www.reddit.com${widget.state.redditModel.data.children[widget.index].data.permalink}');
     Future<void> _launchUrl() async {

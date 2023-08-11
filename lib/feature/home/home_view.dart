@@ -30,7 +30,6 @@ class _HomeViewState extends State<HomeView> {
           title: Text(
             StringConstants.appbarTitle,
           ),
-          actions: [],
         ),
         drawer: const CustomDrawer(),
         body: BlocBuilder<RedditBloc, RedditStates>(

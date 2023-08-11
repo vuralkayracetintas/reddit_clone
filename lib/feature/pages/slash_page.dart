@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
 import 'package:reddit_clone/feature/home/home_view.dart';
+import 'package:reddit_clone/product/constans/color_constants.dart';
 import 'package:reddit_clone/product/constans/string_constans.dart';
 import 'package:reddit_clone/product/repository/reddit_repository.dart';
 
@@ -34,15 +35,10 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    const colorizeColors = [
-      Color.fromARGB(255, 101, 191, 107),
-      Color.fromARGB(255, 255, 255, 255),
-    ];
-
     return Scaffold(
       backgroundColor: Theme.of(context).brightness == Brightness.dark
-          ? Color.fromARGB(255, 37, 34, 34)
-          : const Color.fromARGB(255, 237, 237, 237),
+          ? ColorConstans.kDartGrey
+          : ColorConstans.kWhite,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
