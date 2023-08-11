@@ -7,7 +7,7 @@ class CardDetails extends StatelessWidget {
   final RedditLoadedState state;
   final int index;
 
-  CardDetails({required this.state, required this.index});
+  const CardDetails({super.key, required this.state, required this.index});
 
   @override
   Widget build(BuildContext context) {

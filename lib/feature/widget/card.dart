@@ -5,6 +5,7 @@ import 'package:kartal/kartal.dart';
 import 'package:reddit_clone/bloc/RedditBloc/reddit_states.dart';
 
 import 'package:reddit_clone/product/constans/color_constants.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CustomCard extends StatefulWidget {
@@ -48,6 +49,19 @@ class _CustomCardState extends State<CustomCard> {
         likes++;
       }
     });
+  }
+
+  Future<void> share() async {
+    final result = await Share.shareWithResult(
+        'https://www.reddit.com${widget.state.redditModel.data.children[widget.index].data.permalink}');
+
+    if (result.status == ShareResultStatus.success) {
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Paylaşım başarıyla tamamlandı!')));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Paylaşım sırasında bir hata oluştu.')));
+    }
   }
 
   @override
@@ -155,8 +169,7 @@ class _CustomCardState extends State<CustomCard> {
                   ],
                 ),
                 IconButton(
-                    onPressed: () {},
-                    //_launchUrl,
+                    onPressed: share,
                     icon: const FaIcon(
                       FontAwesomeIcons.arrowUpFromBracket,
                     )),

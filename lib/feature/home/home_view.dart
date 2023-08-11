@@ -19,14 +19,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  bool isDarkMode = false; // Tema modu durumu
-
-  void _toggleDarkMode(bool value) {
-    setState(() {
-      isDarkMode = value;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -40,7 +32,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           actions: [],
         ),
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         body: BlocBuilder<RedditBloc, RedditStates>(
           builder: (BuildContext context, state) {
             debugPrint('state: ${state.runtimeType}');
