@@ -42,16 +42,10 @@ Bu proje, Flutter kullanılarak geliştirilen bir Reddit benzeri bir uygulamayı
   
 </div>
 <div>
-  <img src="assets/screenshots/3.png" alt="Detay Sayfası" width="300"/>
-  <img src="assets/screenshots/4.png" alt="Detay Sayfası" width="300"/>
-  
-</div>
-<div>
   <img src="assets/screenshots/5.png" alt="Detay Sayfası" width="300"/>
   <img src="assets/screenshots/6.png" alt="Detay Sayfası" width="300"/>
   
 </div>
-  
-  </div>
+
 </div>
 
